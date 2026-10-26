@@ -3,91 +3,74 @@
 A SQL portfolio project using SQLite to explore European football
 data across multiple leagues and seasons.
 
-The analysis examines team results, home and away performance,
-league scoring patterns, and changes in player ratings over time.
+The analysis examines match outcomes, team performance, player
+ratings and league scoring patterns through 15 analytical queries.
 
 ## Dataset
 
 - Database: European Football Database
 - Format: SQLite
-- Main tables used: League, Match, Team, Player, Player_Attributes
-- Original source: [Add the original dataset link]
-- Coverage: [Add the leagues and seasons covered by the dataset]
+- Tables used: Country, League, Match, Team, Player and Player_Attributes
+- Source: [Add the original dataset URL here]
 
-The database is not included in this repository.
-Download it from the original source before running the queries.
+The database is not included in this repository and must be
+downloaded separately from the original source.
 
-## Project Objectives
+## Objectives
 
-- Explore the structure and coverage of a relational football database.
-- Translate analytical questions into SQL queries.
-- Combine match, team, league and player data.
-- Apply aggregations, joins, subqueries, CTEs and window functions.
-- Summarise patterns in team performance and player ratings.
+- Explore league and season coverage.
+- Compare match outcomes and home-win percentages.
+- Calculate team standings and performance metrics.
+- Examine player ratings and attribute profiles.
+- Compare scoring patterns across leagues and seasons.
+
+## Tools and SQL Techniques
+
+- SQLite
+- DB Browser for SQLite
+- Joins
+- Aggregations and GROUP BY
+- Conditional expressions with CASE
+- Common Table Expressions (CTEs)
+- ROW_NUMBER window function
+- UNION ALL
+- Date-based analysis with strftime
 
 ## Analysis Overview
 
-The file `football_analysis.sql` contains 15 queries organised
-into three sections.
+### Queries 1–4: League Coverage and Match Outcomes
 
-### 1. Exploratory Analysis — Queries 1–5
+- Match counts by league and season.
+- Total goals and average goals per match by league.
+- Home-win percentages.
+- Distribution of home wins, draws and away wins.
 
-- Data coverage by league and season.
-- Team and player counts.
-- Basic distributions and data quality checks.
+### Queries 5–8: Team Standings and Seasonal Performance
 
-### 2. Team and Match Performance — Queries 6–10
+- Calculated Premier League standings for 2015/2016.
+- Highest-ranked team by calculated points per league-season.
+- Team-seasons with the highest total points.
+- Leicester City's results across the available seasons.
 
-- Home and away performance.
-- Seasonal team rankings.
-- Goal patterns and match-level metrics.
+### Queries 9–11: Player Ratings and Attribute Profiles
 
-### 3. Player Ratings and Trends Over Time — Queries 11–15
+- Highest recorded player rating observations.
+- Top 20 players by peak overall rating.
+- Average player attributes by peak-rating tier,
+  using one selected record per player.
 
-- Player attribute profiles by rating tier.
-- Overall and monthly team performance.
-- Changes in player ratings over time.
-- League scoring patterns by season.
+### Queries 12–13: Overall and Monthly Team Performance
 
-## SQL Techniques
+- Team performance across the available seasons.
+- Monthly points, goals and points per match.
 
-- Joins
-- GROUP BY and aggregate functions
-- Subqueries
-- Common Table Expressions (CTEs)
-- Window functions
+### Query 14: Changes in Recorded Player Ratings
 
-## Repository Contents
+- Comparison of each player's average overall rating in their
+  first and last available calendar years.
+- Players with records in only one year are excluded.
 
-| File | Description |
-|------|-------------|
-| `football_analysis.sql` | The 15 analytical queries, with explanatory comments |
+### Query 15: League Scoring Patterns
 
-## How to Run
-
-1. Download the SQLite database from the original dataset source.
-2. Open the database in DB Browser for SQLite.
-3. Open the `Execute SQL` tab.
-4. Load `football_analysis.sql`, or copy an individual query into the editor.
-5. Execute the queries individually and inspect the results.
-
-The SQL script contains the analysis queries.
-The dataset must be downloaded separately.
-
-## Selected Findings
-
-[Add 3–5 findings supported by the actual query results.]
-
-For each finding, include:
-- The relevant query number.
-- The result, including the league, team or season where applicable.
-- A brief explanation of what the result shows.
-
-## Limitations
-
-[Add limitations identified while working with the data.]
-
-Consider discussing:
-- Missing values or incomplete coverage.
-- How team rankings were calculated.
--
+- Average goals per match by league and season.
+- Results restricted to league-seasons with at least 50 matches.
