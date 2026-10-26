@@ -11,7 +11,7 @@ ratings and league scoring patterns through 15 analytical queries.
 - Database: European Football Database
 - Format: SQLite
 - Tables used: Country, League, Match, Team, Player and Player_Attributes
-- Source: [European Soccer Database — Hugo Mathien, Kaggle](https://www.kaggle.com/datasets/hugomathien/soccer)]
+- Source: [European Soccer Database — Hugo Mathien, Kaggle](https://www.kaggle.com/datasets/hugomathien/soccer)
 
 The database is not included in this repository and must be
 downloaded separately from the original source.
