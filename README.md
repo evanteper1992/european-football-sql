@@ -1,64 +1,93 @@
 # European Football Database Analysis
 
-A SQL portfolio project exploring a comprehensive European football database using SQLite. The analysis covers player performance, team results, league scoring patterns, and temporal trends across multiple seasons.
+A SQL portfolio project using SQLite to explore European football
+data across multiple leagues and seasons.
+
+The analysis examines team results, home and away performance,
+league scoring patterns, and changes in player ratings over time.
 
 ## Dataset
 
-- **Database:** European Football (SQLite)
-- **Main tables used:** League, Match, Team, Player, Player_Attributes
-- **Scope:** Multiple European leagues and seasons with detailed match events and player attributes.
+- Database: European Football Database
+- Format: SQLite
+- Main tables used: League, Match, Team, Player, Player_Attributes
+- Original source: [Add the original dataset link]
+- Coverage: [Add the leagues and seasons covered by the dataset]
 
-## Objectives
+The database is not included in this repository.
+Download it from the original source before running the queries.
 
-This project demonstrates the ability to:
+## Project Objectives
 
-- Translate business questions into efficient SQL queries.
-- Use advanced SQL features: CTEs, window functions, aggregations, complex joins, and subqueries.
-- Perform end-to-end data analysis: from raw tables to actionable insights.
+- Explore the structure and coverage of a relational football database.
+- Translate analytical questions into SQL queries.
+- Combine match, team, league and player data.
+- Apply aggregations, joins, subqueries, CTEs and window functions.
+- Summarise patterns in team performance and player ratings.
 
-## Structure of the Analysis
+## Analysis Overview
 
-The script `football_analysis.sql` contains 15 analytical queries grouped into three thematic blocks:
+The file `football_analysis.sql` contains 15 queries organised
+into three sections.
 
-### 1. Foundational Queries (1–5)
+### 1. Exploratory Analysis — Queries 1–5
 
-Basic exploratory analysis of leagues, seasons, teams, and players:
 - Data coverage by league and season.
 - Team and player counts.
 - Basic distributions and data quality checks.
 
-### 2. Team and Match Performance (6–10)
+### 2. Team and Match Performance — Queries 6–10
 
-Analysis of match outcomes and team performance:
-- Home vs away advantage.
+- Home and away performance.
 - Seasonal team rankings.
 - Goal patterns and match-level metrics.
 
-### 3. Advanced Player and Temporal Analytics (11–15)
+### 3. Player Ratings and Trends Over Time — Queries 11–15
 
-Deeper analytics on players and time-based trends:
 - Player attribute profiles by rating tier.
-- All-time and monthly team performance.
-- Player rating evolution over time.
+- Overall and monthly team performance.
+- Changes in player ratings over time.
 - League scoring patterns by season.
 
-## Files in This Repository
+## SQL Techniques
 
-- `football_analysis.sql`  
-  All 15 queries with comments explaining the business question, main logic, and usefulness of each result.
+- Joins
+- GROUP BY and aggregate functions
+- Subqueries
+- Common Table Expressions (CTEs)
+- Window functions
 
-- `european_football_analysis.sqbpro`  
-  DB Browser for SQLite project file. Opening this file restores the database connection and query tabs.
+## Repository Contents
+
+| File | Description |
+|------|-------------|
+| `football_analysis.sql` | The 15 analytical queries, with explanatory comments |
 
 ## How to Run
 
-1. Install [DB Browser for SQLite](https://sqlitebrowser.org/).
-2. Open `european_football_analysis.sqbpro` in DB Browser.
-3. Ensure the database file (`database.sqlite` or equivalent) is correctly linked.
-4. Open `football_analysis.sql` in the SQL editor tab.
-5. Run individual queries or the entire script as needed.
+1. Download the SQLite database from the original dataset source.
+2. Open the database in DB Browser for SQLite.
+3. Open the `Execute SQL` tab.
+4. Load `football_analysis.sql`, or copy an individual query into the editor.
+5. Execute the queries individually and inspect the results.
 
-## Notes
+The SQL script contains the analysis queries.
+The dataset must be downloaded separately.
 
-- Player identifiers (`player_api_id`) are used instead of names to maintain anonymization.
-- Queries include filters (e.g., minimum matches played) to ensure statistically meaningful results.
+## Selected Findings
+
+[Add 3–5 findings supported by the actual query results.]
+
+For each finding, include:
+- The relevant query number.
+- The result, including the league, team or season where applicable.
+- A brief explanation of what the result shows.
+
+## Limitations
+
+[Add limitations identified while working with the data.]
+
+Consider discussing:
+- Missing values or incomplete coverage.
+- How team rankings were calculated.
+-
